@@ -1,9 +1,9 @@
 import streamlit as st
 from backend import ask_ollama
 
-st.set_page_config(page_title="AI Code Explainer + Bug Fixer (FAST)", layout="wide")
+st.set_page_config(page_title="AI Code Assistance", layout="wide")
 
-st.title("⚡ AI Code Explainer + Bug Fixer (FAST • Offline)")
+st.title("⚡ AI Code Assistance (FAST • Offline)")
 
 # Sidebar
 mode = st.radio("Mode:", ["Explain Code", "Fix Bugs"])
@@ -45,3 +45,4 @@ if st.button("⚡ Run"):
         for chunk in ask_ollama(prompt):
             final_text += chunk
             placeholder.markdown(final_text)
+
